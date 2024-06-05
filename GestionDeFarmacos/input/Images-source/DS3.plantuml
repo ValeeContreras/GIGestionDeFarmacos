@@ -1,0 +1,10 @@
+@startuml
+group PUT Cambio de estado de la Prescripción
+@startuml
+Paciente -> Servidor : PUT
+activate Servidor
+Servidor -> Servidor : Actualización
+return 
+@enduml
+end
+@enduml

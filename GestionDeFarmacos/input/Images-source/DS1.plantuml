@@ -1,0 +1,10 @@
+@startuml
+group POST Crear/Guardar Prescripción
+@startuml
+Paciente -> Servidor : POST
+activate Servidor
+Servidor -> Servidor : Validación
+return 
+@enduml
+end
+@enduml

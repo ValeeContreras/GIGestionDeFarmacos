@@ -1,0 +1,10 @@
+@startuml
+group GET Leer Farmaco
+@startuml
+Paciente -> Servidor : GET
+activate Servidor
+Servidor -> Servidor : Verificación
+return 
+@enduml
+end
+@enduml

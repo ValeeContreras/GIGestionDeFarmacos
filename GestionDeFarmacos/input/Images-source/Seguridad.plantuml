@@ -1,0 +1,10 @@
+@startuml
+skinparam sequenceMessageAlign right
+Aplicacion -> ServidorSeguridad : Pide una llave(Token)
+ServidorSeguridad -> Aplicacion : Le devuelve una llave(Token)
+Aplicacion -> ApiG: Envia el recurso más el token
+ApiG -> ServidorSeguridad: Pregunta si el token es del recurso
+ServidorSeguridad -> ApiG: Respoden si corresponde o no
+ApiG -> Aplicacion: Rechazado (No Corresponde)
+ApiG -> ApiF: Aceptado (Si Corresponde)
+@enduml

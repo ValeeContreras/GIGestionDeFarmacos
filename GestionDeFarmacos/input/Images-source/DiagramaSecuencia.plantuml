@@ -1,0 +1,31 @@
+@startuml
+
+group POST Crear/Guardar Prescripción
+Paciente -> Servidor : POST
+activate Servidor
+Servidor -> Servidor : Validación
+return 
+end
+
+group PUT Modificar Prescripción
+Paciente -> Servidor : PUT
+activate Servidor
+Servidor -> Servidor : Actualización
+return 
+end
+
+group PUT Cambio de estado de la Prescripción
+Paciente -> Servidor : PUT
+activate Servidor
+Servidor -> Servidor : Actualización
+return 
+end
+
+group GET Leer Farmaco
+Paciente -> Servidor : GET
+activate Servidor
+Servidor -> Servidor : Verificación
+return 
+end
+
+@enduml
