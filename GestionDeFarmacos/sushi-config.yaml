@@ -55,8 +55,6 @@ pages:
     title: Objetivos  
   CasosDeUsos.md:
     title: Casos de usos
-  Operaciones.md:
-    title: Operaciones
   Seguridad.md:
     title: Seguridad
 #   implementation.xml:
@@ -91,7 +89,6 @@ menu:
   Home: index.html
   Objetivos: Objetivos.html
   CasosDeUsos: CasosDeUsos.html
-  Operaciones: Operaciones.html
   Seguridad: Seguridad.html
   Artifacts: artifacts.html
 

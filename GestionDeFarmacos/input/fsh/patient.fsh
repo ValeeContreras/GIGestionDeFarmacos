@@ -41,16 +41,16 @@ Description: "Este Perfil del paciente ha sido desarrollado para cubrir las nece
 * identifier.value ^short = "Número o valor de id"
 * identifier.value ^definition = "Número o valor de identificación"
 
-
 * birthDate 1..1
-  * ^short = "La fecha de nacimiento del individuo. En el formato (DD-MM-AAAA)." 
+  * ^short = "La fecha de nacimiento del individuo. En el formato (YYYY-MM-AA)." 
   * ^definition = "Patient.birthDate: La fecha de nacimiento del individuo."
 
 Instance: EjemploPaciente
 InstanceOf: Paciente
 Usage: #example
-Title: "Ejemplo del paciente"
-Description: "Aquí está un ejemplo del paciente."
+Title: "Ejemplo Paciente"
+Description: "Aca esta el ejemplo del paciente"
 * name.family = "Valentina Daniela"
 * name.given = "Contreras"
+* identifier.value = "20706399-1"
 * birthDate = "2001-02-10"

@@ -5,7 +5,6 @@ Title: "SimpleQuantity para el caso de Receta"
 Description: "Definición para una unidad simple y su contenido para el consumo de un fármaco según prescripción"
 * ^version = "1.0.0"
 * ^publisher = "HL7 Chile"
-
 //* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * ^purpose = "Este Pefil basado en SimpleQuantity tiene como finalidad especificarla para Chile"
 * . MS
