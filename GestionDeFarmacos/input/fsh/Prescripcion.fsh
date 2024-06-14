@@ -1,8 +1,8 @@
-Profile:        PrescripcionRecetaCL2
-Parent:         MedicationRequest
-Id:             RecetaPrescripcionCl
-Title:          "Prescripción"
-Description:    "Este Perfil describe la información contenida en la Prescripción de un medicamento"
+Profile: PrescripcionRecetaCL
+Parent: MedicationRequest
+Id: PrescripcionRecetaCL
+Title: "Prescripción"
+Description: "Este Perfil describe la información contenida en la Prescripción de un medicamento"
 
 * identifier MS
   * type MS
@@ -98,7 +98,7 @@ Description:    "Este Perfil describe la información contenida en la Prescripci
 * extension ^short = "Determinación del medicamento en Producto Comercial"
 * extension ^definition = "Determinación de un medicamento en Producto Comercial. Para eso esta extensión define una Referencia solo a un recurso de medication. "
 
-* subject only Reference (Patient)
+* subject only Reference (Paciente)
 * subject ^short = "Referencia al paciente a quien se le prescribe"
 * subject ^definition = "La referencia en este caso solo se hace sobre el paciente al cual se le prescribe el fármaco independiente que sea otra la persona que hace retiro de estos"
 * subject.reference ^short = "Referencia al recurso del paciente. \"https://api-receta.minsal.cl/v2/Patient\""
@@ -117,7 +117,7 @@ Description:    "Este Perfil describe la información contenida en la Prescripci
 
 * recorder 0..1
 //* recorder only Reference(PrestadorCL)
-* recorder only Reference(Practitioner)
+* recorder only Reference (Practitioner)
 * recorder ^short = "Referencia a un sujeto, que será el que registra la receta"
 * recorder ^definition = "En este caso la referencia será sobre una persona que es un prescriptor validado por la SIS"
 * recorder.reference ^short = "Recurso asociado \"http://api-receta.minsal.cl/v2/Practitioner\""
@@ -135,7 +135,7 @@ Description:    "Este Perfil describe la información contenida en la Prescripci
 * note ^short = "Texto libre en donde se expresan las instrucciones de como el medicamento debe ser administrado"
 * note ^definition = "Información adicional sobre la prescripción que no puede ser transmitida por los otros atributos."
 
-* dosageInstruction only cl-dosage
+* dosageInstruction only ClDosage
 
 * priorPrescription 0..1
 * priorPrescription ^short = "Prescripción u orden a la cual esta reemplaza"
@@ -146,42 +146,45 @@ Description:    "Este Perfil describe la información contenida en la Prescripci
 
 /*
 Instance : PrescripcionRecetaCL
-Title : "Ejemplo Prescripción de Medicamento Oxycodone Vía Oral, una o dos tabletas al día cada 4 o 6 horas, para una solicitud según necesidad con pre-condiciones"
 InstanceOf : RecetaPrescripcionCl  
 Usage: #example
-* identifier.system = "http://recetaelectronica.minsal.cl/validar_tipo_receta"
-* identifier.value = "RNCheque-1232"
+Title : "Ejemplo Prescripción de Medicamento Oxycodone Vía Oral, una o dos tabletas al día cada 4 o 6 horas, para una solicitud según necesidad con pre-condiciones"
+Description: "Ejemplo prescripcion 1"
 * status = #active
 * intent = #order
+* medicationReference.reference = "https://api-receta.minsal.cl/v2/Medication"
+* medicationReference.display = "Oxycodone"
+* subject = Reference(Patient/EjemploPaciente)
+* requester.reference = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl/3240"
+* requester.display = "Fernanda Soto"
+* groupIdentifier.value = "tv829fxi21tqloo5fl2n"
+*/
+
+/*
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
 * category.coding.code = #outpatient
-* groupIdentifier.value = "tv829fxi21tqloo5fl2n"
-* medicationReference.reference = "https://api-receta.minsal.cl/v2/Medication/Medicamento#1345"
-* medicationReference.display = "Oxycodone"
-* extension[ProdComercial].valueReference.reference = "https://api-receta.minsal.cl/v2/Medication/med#1257"
+* extension[ProdComercial].valueReference.reference = https://api-receta.minsal.cl/v2/Medication/med
 * extension[ProdComercial].valueReference.display = "Oxycontin MR"
-* subject.reference = "https://api-receta.minsal.cl/v2/Patient/Paciente#2411224"
-* subject.display = "Patricio Perez"
-* authoredOn = "2021-06-12"
-* requester.reference = "https://api-receta.minsal.cl/v2/Practitioner/PRestador#923421"
-* requester.display = "Cecilia Ampuero"
-* note.text = "Al paciente se le indicó que lo administrara durante comidas"
+*/
 
-Instance: PrescripcionRecetaCL-2
-Title: "Ejemplo de Prescripción de Hidroclorotizida + Valsartán, Prescrito dos veces al día Vía Oral, tragándoselo"
-InstanceOf: RecetaPrescripcionCl
+
+Instance: EjemploPrescripcion2
+InstanceOf: PrescripcionRecetaCL
 Usage: #example
+Title: "Ejemplo de Prescripción de Hidroclorotizida + Valsartán, Prescrito dos veces al día Vía Oral, tragándoselo"
+Description: "Ejemplo prescripcion 1"
+* status = #active
+* intent = #order
 * identifier.type.coding.code = #Id_Local
 * identifier.type.coding.display = "Identificación Local"
 * identifier.system = "http://recetaelectronica.minsal.cl/validar_tipo_receta"
 * identifier.value = "10101010"
 * identifier.assigner.display = "CESFAM COQUIMBO"
-* status = #active
-* intent = #order
 * category.coding.code = #outpatient
 * medicationReference = Reference(https://api-receta.minsal.cl/v2/Medication/1703591000167111) "Hidroclorotiazida 25 mg + Valsartán 160 mg comprimido"
-* subject = Reference(https://api-receta.minsal.cl/v2/Patient/3254156114) "FELIPE MAURICIO MANCINI RUIZ-TAGLE"
-* requester = Reference(https://api-receta.minsal.cl/v2/Practitioner/3253825513) "JUAN JOSÉ ORTEGA CALLEJAS"
+* subject = Reference(Patient/EjemploPaciente)
+* requester = Reference(https://api-receta.minsal.cl/v2/Practitioner/3240) "JUAN JOSÉ ORTEGA CALLEJAS"
 * authoredOn = "2021-08-15T17:31:00Z"
 * groupIdentifier.value = "64e51a53-97d3-44dc-bbfe-1c8697697763"
-*/
+
+

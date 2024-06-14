@@ -21,3 +21,15 @@ Description: "Definición para una unidad simple y su contenido para el consumo 
 * code ^short = "Código de la Unidad usada para definir el valor"
 * code ^short = "Código de la Unidad usada para definir el valor, la cual proviene de los de Unidad Asistencial"
 * code from VSUnidadAsistencial
+
+
+Instance: EjemploSQ
+InstanceOf: SimpleQuantityCL
+Usage: #inline
+Title: "Ejemplo Simple Quantity"
+Description: "Ejemplo de la cantidad simple"
+* unit = "1"
+//* system = https://interoperabilidad.minsal.cl/fhir/ig/snre/CodeSystem/CSUnidadAsistencial
+* code = #capsula 
+
+

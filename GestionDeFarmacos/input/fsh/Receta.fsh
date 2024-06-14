@@ -1,4 +1,4 @@
-Profile:        MedicamentoRecetaCL
+Profile:        RecetaCl
 Parent:         RequestGroup
 Id:             RecetaCl
 Title:          "Receta"
@@ -40,19 +40,33 @@ Description:    "Este Perfil utiliza este recurso como un contenedor de Prescrip
 * basedOn ^comment = "Campo el cual se debe agregar la referencia hacia los medicamentos que se incluyen en esta receta. Con medicamentos incluidos, se hace refencia a los medicamentos agregados dentro del elemento \"contained\""
 * basedOn ^short = "Referencia a las prescipciones que contiene la receta"
 * basedOn 0..* MS
-* basedOn only Reference(PrescripcionRecetaCL2)
+* basedOn only Reference(PrescripcionRecetaCL)
 
-/*
-Instance : EjemploRecetaCL
-Title : "Ejemplo de Recurso de una receta completa"
-InstanceOf : RecetaCl
-* contained[+] = medicationrequest-2
+Instance: EjemploReceta1
+InstanceOf: RecetaCl
+Usage: #example
+Title: "Ejemplo Receta 1"
+Description: "Aca esta el ejemplo de la recera N°1"
 * groupIdentifier.value = "z4fxajxh2kdkock9pvsp"
 * status = #active
 * intent = #order
-* subject.reference = "Patient/Paciente#2411224"
+* subject = Reference(Patient/EjemploPaciente)
 * authoredOn = "2021-06-12T17:31:00Z"
 
+
+Instance: EjemploReceta2
+InstanceOf: RecetaCl
+Usage: #example
+Title: "Ejemplo Receta 2"
+Description: "Aca esta el ehemplo de receta N°2"
+* groupIdentifier.value = "z4fxajxh2kdkock9pvspN2"
+* status = #draft
+* intent = #order
+* subject = Reference(Patient/EjemploPaciente)
+* authoredOn = "2024-06-13T17:48:00Z" 
+
+
+/*
 Instance: medicationrequest-2
 InstanceOf: RecetaPrescripcionCl
 Usage: #inline

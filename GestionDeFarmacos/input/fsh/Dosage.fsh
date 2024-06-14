@@ -1,6 +1,6 @@
 Profile: ClDosage
 Parent: Dosage
-Id: cl-dosage
+Id: ClDosage
 Title: "CL Dosage"
 Description: "Dosage medicamento"
 
@@ -75,7 +75,6 @@ InstanceOf: ClDosage
 Usage: #inline
 Title: "Ejemplo Dosage"
 Description: "Se describe el ejemplo del dosage"
-
 * text = "Una o dos tabletas cada 4 a 6 horas según necesidad en base a la intensidad del dolor renal"
 * patientInstruction = "Una o dos tabletas cada 4 a 6 horas según necesidad en base a la intensidad del dolor renal"
 * sequence = 1
