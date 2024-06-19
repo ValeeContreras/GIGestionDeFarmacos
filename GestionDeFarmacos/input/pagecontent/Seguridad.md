@@ -1,8 +1,10 @@
 Para comprender la seguridad en el acceso a una API FHIR, primero es útil visualizar cómo funciona el proceso. Este diagrama ilustra el flujo de autenticación y autorización utilizando un token, asegurando que solo usuarios puedan interactuar con el servidor FHIR.
 <br>
 
-**ACA IRA LA IMAGEN DE LA SEGURIDAD**
-<br>
+<div align="center" >
+  {% include Seguridad2.svg %}
+</div>
+<br clear="all"/>
 
 A continuación, se muestra el diagrama de secuencia que detalla cada uno de los pasos involucrados en este proceso.
 <br>

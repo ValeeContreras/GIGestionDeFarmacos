@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.cl.clcore: 1.8.5
+  hl7.fhir.cl.clcore: 1.8.10
 #  hl7.fhir.cl.minsal.snre: 0.9.6
 #  fhir.ig.snre.StructureDefinition.RecetaPrescripcionCl: 0.9.6
 #  hl7.fhir.cl.minsal.snre: 0.9.6
