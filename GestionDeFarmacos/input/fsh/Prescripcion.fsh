@@ -148,21 +148,32 @@ Description: "Este Perfil describe la información contenida en la Prescripción
 Instance: Ejemploprescipcion1
 InstanceOf: PrescripcionRecetaCL
 Usage: #example
+Title: "Ejemplo Prescripcion"
+Description: "Ejemplo Prescripcion"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Medication/medicamento1)
+* extension[ProdComercial].valueReference.display = "ibupirac LC 400 mg cápsula blanda (Chemopharma)"
+* medicationReference = Reference(Medication/EjemploMedicamento)
 * subject = Reference(Patient/EjemploPaciente)
-* requester = Reference(Practitioner/Prestador1)
+* requester = Reference(Practitioner/EjemploPrestador)
 * groupIdentifier.value = "7f5b95f78a375236d71f"
 * note.text = "En caso de fiebre"
-//* dosageInstruction = EjemploDosage BUSCAR COMO HACERLO
+* dosageInstruction.patientInstruction = "Una o dos tabletas cada 4 a 6 horas según necesidad en base a la intensidad del dolor renal"
+* dosageInstruction.sequence = 1
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.frequencyMax = 2
+* dosageInstruction.timing.repeat.period = 4
+* dosageInstruction.timing.repeat.periodMax = 6
+* dosageInstruction.timing.repeat.periodUnit = #h
+* dosageInstruction.doseAndRate.doseRange.low.value = 1
+* dosageInstruction.doseAndRate.doseRange.low.unit = "Tableta"
+//* dosageInstruction.doseAndRate.doseQuantity.code = #comprimido
 
 Instance: EjemploMedicamento
 InstanceOf: Medication
-Usage: #inline
+Usage: #example
 Title: "Ejemplo Medicamento"
 Description: "Ejemplo medicamento"
-* id = "medicamento1"
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreMedicamentoCl"
 * identifier[0].use = #official
 * identifier[=].system = "http://minsal.cl/semantikos/description-id"
@@ -174,10 +185,9 @@ Description: "Ejemplo medicamento"
 
 Instance: EjemploPrestador
 InstanceOf: Practitioner
-Usage: #inline
+Usage: #example
 Title: "Ejemplo Prestador"
 Description: "Ejemplo Prestador"
-* id = "Prestador1"
 * name.given = "Sebastian Alberto"
 * name.family = "Navarro"
 

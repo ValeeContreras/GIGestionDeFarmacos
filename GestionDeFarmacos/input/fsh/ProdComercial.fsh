@@ -2,8 +2,8 @@ Extension: ProdComercial
 Id: ProdComercial
 Title: "Identificación de un medicamento bajo su marca comercial"
 Description: "Indicación de un Medicamento bajo su Marca Comercial"
-
-// * extension 0..0
+Context: MedicationRequest
+//* extension 0..0
 * value[x] only Reference
 //* valueReference = Reference()
 * valueReference ^short = "Referencia a un recurso medicamento en \"https://api-receta.minsal.cl/v2/Medication\""
