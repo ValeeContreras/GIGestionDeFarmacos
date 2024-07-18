@@ -1,9 +1,0 @@
-@startuml
-(Aplicación) -> (Servidor de Seguridad) : Paso 1 
-(Servidor de Seguridad) -> (Aplicación) : Paso 2
-(Aplicación) -> (Api G) : Paso 3 y 6
-(Api G) -> (Servidor de Seguridad) : Paso 4
-(Servidor de Seguridad) -> (Api G) : Paso 5
-(Api G) -> (Aplicación)
-(Api G) -> (Servidor FHIR) : Paso 7
-@enduml

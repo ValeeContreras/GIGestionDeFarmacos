@@ -10,7 +10,7 @@ Description: "Este Perfil del paciente ha sido desarrollado para cubrir las nece
     * ^short = "Primer Apellido del paciente"
     * extension contains http://hl7.org/fhir/StructureDefinition/humanname-mothers-family named SegundoApellido 0..1
    
-* identifier 0..1 
+* identifier 1..1 
 * identifier ^short = "Listados de Id de Paciente. De poseer una CI con RUN vigente, este DEBE ser ingresado"
 * identifier ^definition = "Este es el listado de Identificaciones de un paciente. Se procura como R2 el RUN, pero en caso de no existir ese identificador se debe ocupar otro nacional u otro otorgado por país extranjero"
 * identifier ^comment = "En caso de que el paciente posea una CI con número RUN válido, este debe ser ingresado como identificador, independiente de que tenga otros identificadores, los cuales también pueden ser ingresados. La identificación implica el ingreso del tipo de documento, el país de origen de ese documento y ev valor del identificador"

@@ -3,15 +3,8 @@ Esta guía de implementación está diseñada para el uso de datos enfocados en 
 <br>
 
 ### Introducción
-En la región de Valparaíso, según la proyección del CENSO 2017, para el año 2023 se estimaba una población total de xxx.xxx personas. De este grupo, aproximadamente el 81% está inscrito en la APS. La distribución de la población inscrita en la APS por grupo etario se puede observar en la siguiente imagen:
-<br>
 
-**ACA VA EL GRAFICO**
-
-<br>
-Cada grupo etario enfrenta dificultades particulares para acceder a la información sobre sus medicamentos y cuidar de su salud. Actualmente, las recetas y prescripciones se entregan en papel, y muchas de ellas están escritas a mano, lo que dificulta su lectura. Además, el papel se puede extraviar fácilmente, y obtener una nueva receta o prescripción requiere acudir nuevamente a la AP.
-<br>
-El propósito de los perfiles de esta Guía de Implementación es proporcionar un mecanismo para acceder a los fármacos que son prescritos de manera más eficiente y segura.
+En las APS tener un registro de los medicamentos es bastaste ineficiente, por lo que con esta guía de implementación esta diseñada para un sistema digital que permita gestionar los fármacos de manera eficiente. Este sistema abarcará la creación de la receta, actualización del estado como tambien la actualización por modificación de la prescripcion y consulta de las recetas.
 
 ### Contenido de la Guía
 Esta guía de implementación se estructura en base al menú de la parte superior de la siguiente manera:
@@ -23,7 +16,6 @@ Esta guía de implementación se estructura en base al menú de la parte superio
 * [Seguridad](Seguridad.html): Infromación sobre la seguridad.
 * [Resumen de Artefactos](artifacts.html): Describe todos los artefactos que son parte de esta GI, separados en Estructura de Perfiles, Extensiones, Value Sets y Ejemplos.
 <br>
-
 Esta estructura está diseñada para facilitar la navegación y comprensión de los diversos componentes y procesos involucrados en la gestión de fármacos en la Atención Primaria de Salud.
 
 
