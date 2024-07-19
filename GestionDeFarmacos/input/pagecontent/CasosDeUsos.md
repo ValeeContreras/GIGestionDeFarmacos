@@ -29,7 +29,9 @@ Este caso de uso describe la generación de una Receta con una o múltiples Pres
 ##### Operación
 El envío de la receta se hace por medio de la operación **POST**, sobre el recurso RequestGroup. 
 <br>
+```
 POST [URL_Base]/RequestGroup
+```
 <br>
 
 #### Caso de uso 2: Modificar Prescripción
@@ -49,7 +51,9 @@ Este caso nos presenta la capacidad de realizar cambios en una prescripción, es
 ##### Operación
 Modificar una prescripción se hace de por medio de la operación **PUT**, sobre la identidicación del recurso RequestGroup. Se considera para este caso armar el recurso RequestGroup completo con las modificaciones a realizar para luego actualizar
 <br>
+```
 PUT [URL_Base]/RequestGroup/[id]
+```
 <br>
 
 #### Caso de uso 3: Cambio de estado de la Prescripción
@@ -71,7 +75,9 @@ Este caso nos presenta la capacidad de realizar cambios del estado de una prescr
 ##### Operación 
 Cambiar el estado de una prescripción se hace de por medio de la operación **PUT**, sobre la identidicación del recurso RequestGroup.
 <br>
+```
 PUT [URL_Base]/RequestGroup/[id]
+```
 <br>
 
 #### Caso de uso 4: Lectura del Fármaco
@@ -88,4 +94,6 @@ Se utiliza el metodo **GET** para poder acceder a la información  de las prescr
 1.- Lectura con el identificador del paciente de las Recetas:
 <br>
 
+```
 GET [URL_Base] RequestGroup?patient=Patient.identifier={identifier}
+```
