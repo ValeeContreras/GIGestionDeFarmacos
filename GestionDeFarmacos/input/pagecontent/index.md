@@ -54,6 +54,7 @@ Esta estructura está diseñada para facilitar la navegación y comprensión de 
     Esta especificación se proporciona sin garantía de integridad o coherencia, y la publicación oficial reemplaza este borrador.
     No se puede inferir ninguna responsabilidad por el uso o mal uso de esta especificación, o sus consecuencias.
   </p>
+  
 </div>
 
 **Esta Guía de Implementación ha sido posible gracias a las atentas contribuciones de las siguientes personas:**

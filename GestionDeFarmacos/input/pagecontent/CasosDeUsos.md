@@ -52,7 +52,7 @@ Este caso nos presenta la capacidad de realizar cambios en una prescripción, es
 Modificar una prescripción se hace de por medio de la operación **PUT**, sobre la identidicación del recurso RequestGroup. Se considera para este caso armar el recurso RequestGroup completo con las modificaciones a realizar para luego actualizar
 <br>
 ```
-PUT [URL_Base]/RequestGroup/[id]
+PUT [URL_Base]/MedicationRequest/[id]
 ```
 <br>
 
@@ -76,7 +76,7 @@ Este caso nos presenta la capacidad de realizar cambios del estado de una prescr
 Cambiar el estado de una prescripción se hace de por medio de la operación **PUT**, sobre la identidicación del recurso RequestGroup.
 <br>
 ```
-PUT [URL_Base]/RequestGroup/[id]
+PUT [URL_Base]/MedicationRequest/[id]
 ```
 <br>
 
