@@ -95,5 +95,5 @@ Se utiliza el metodo **GET** para poder acceder a la información  de las prescr
 <br>
 
 ```
-GET [URL_Base] RequestGroup?patient=Patient.identifier={identifier}
+GET [URL_Base] MedicationRequest?patient={identifier}
 ```
